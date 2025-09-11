@@ -53,3 +53,122 @@ h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+/* content */
+.content {
+  max-height: 100vh;;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas: 
+    'sidebar header'
+    'sidebar body';
+  border: 2px solid black;
+}
+
+
+/* sidebar */
+.sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 125fr 450fr 425fr;
+  background-color: lightblue;
+  color: white;
+  grid-area: sidebar;
+}
+
+.logo {
+  background-color: red;
+}
+
+.links {
+  background-color: orange;
+}
+
+.misc-links {
+  background-color: yellow;
+}
+
+
+/* header */
+.header {
+  display: grid;
+  grid-template-columns: 560px 340px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    'search-bar notification-bell profile'
+    'profile-pic greeting buttons';
+
+  background-color: antiquewhite;
+  grid-area: header;
+}
+
+.search-bar {
+  background-color: green;
+  grid-area: search-bar;
+}
+
+.notification-bell {
+  background-color: blue;
+  grid-area: notification-bell;
+}
+
+.profile {
+  background-color: purple;
+  grid-area: profile;
+}
+
+.profile-pic {
+  background-color: brown;
+  grid-area: profile-pic;
+}
+
+.greeting {
+  background-color: pink;
+  grid-area: greeting;
+}
+
+.buttons {
+  background-color: black;
+  grid-area: buttons;
+}
+
+
+/* body */
+.body {
+  display: grid;
+  grid-template-columns: 644px 256px;
+  grid-template-rows: 0.125fr 1fr 1fr;
+  grid-template-areas: 
+    'project-header announcement-header'
+    'projects announcement-box'
+    'projects trending-users';
+
+  background-color: gray;
+  grid-area: body;
+}
+
+.project-header {
+  background-color: aqua;
+  grid-area: project-header;
+}
+
+.announcement-header {
+  background-color: navy;
+  grid-area: announcement-header;
+}
+
+.projects {
+  background-color: darkgreen;
+  grid-area: projects;
+}
+
+.announcement-box {
+  background-color: darkred;
+  grid-area: announcement-box;
+}
+
+.trending-users {
+  background-color: white;
+  grid-area: trending-users;
+}
